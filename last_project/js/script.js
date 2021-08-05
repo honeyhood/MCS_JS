@@ -40,10 +40,10 @@ form.onsubmit = e => {
   let user = new Person(inputName.value);
   if (catTrue.checked) {
     user.hasCat();
-  } 
+  }
   if (restTrue.checked) {
     user.hasRest();
-  } 
+  }
   if (moneyTrue.checked) {
     user.hasMoney();
   }

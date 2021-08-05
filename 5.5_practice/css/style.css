@@ -1,0 +1,16 @@
+@import url(reset.css);
+
+.bar1 {
+	height: 50px;
+	background-color: red;
+}
+
+.bar2 {
+	height: 50px;
+	background-color: blue;
+}
+
+.bar3 {
+	height: 50px;
+	background-color: green;
+}

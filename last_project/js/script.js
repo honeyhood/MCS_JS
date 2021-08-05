@@ -21,7 +21,7 @@ class Person {
     xhr.send();
     let DATA = JSON.parse(xhr.responseText);
     if (Math.round(DATA.main.temp) - 273 > 15) {
-     ++this.happiness;
+      ++this.happiness;
     }
   }
 }
@@ -40,20 +40,20 @@ form.onsubmit = e => {
   let user = new Person(inputName.value);
   if (catTrue.checked) {
     user.hasCat();
-  } else if (restTrue.checked) {
+  } 
+  if (restTrue.checked) {
     user.hasRest();
-  } else if (moneyTrue.checked) {
+  } 
+  if (moneyTrue.checked) {
     user.hasMoney();
   }
   user.isSunny();
   let personName = document.querySelector(".personName");
   personName.innerHTML = user.name;
   let icon = document.querySelector(".icon");
-  if (user.happiness == 4) {
+  if (user.happiness > 3) {
     icon.innerHTML = "😄";
-  } else if (user.happiness == 3) {
-    icon.innerHTML = "😐";
-  } else if (user.happiness == 2) {
+  } else if (user.happiness > 1) {
     icon.innerHTML = "😐";
   } else if (user.happiness < 2)
     icon.innerHTML = "☹️";

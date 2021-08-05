@@ -37,16 +37,16 @@ form.onsubmit = e => {
 	let catFalse = document.getElementById("catTrue");
 	let restFalse = document.getElementById("restTrue");
 	let moneyFalse = document.getElementById("moneyTrue");
-	let inputName = document.querySelectorAll(".inputName");
-	let User = new Person("");
+	let inputName = document.querySelector(".inputName");
+	let user = new Person(inputName.value);
 	if(catTrue.checked) {
-		return User.hasCat(); 
+		return user.hasCat(); 
 	}else if(restTrue.checked) {
-		return User.hasRest();
+		return user.hasRest();
 	}else if(moneyTrue.checked) {
-		return User.hasMoney();
+		return user.hasMoney();
 	}
-	User.isSunny();
+	user.isSunny();
 	let personName = document.querySelector(".personName");
-	personName.innerHTML = ;
+	personName.innerHTML = user;
 	}
